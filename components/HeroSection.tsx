@@ -65,7 +65,7 @@ export default function HeroSection() {
                 강의 요청 / 상담하기
               </a>
               <a
-                href="https://open.kakao.com/o/guxe3pvh"
+                href="https://open.kakao.com/me/jinenting33"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] px-7 py-4 rounded-2xl font-semibold text-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
