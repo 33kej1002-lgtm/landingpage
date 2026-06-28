@@ -49,10 +49,10 @@ export default function ContactSection() {
     {
       title: "카카오톡 프로필",
       value: "ID: jinenting33",
-      desc: "실시간 1:1 카카오톡 프로필 연결",
+      desc: "실시간 1:1 카카오톡 오픈채팅 연결",
       iconType: "kakao",
       actionText: "카톡 연결하기",
-      actionHref: "https://open.kakao.com/me/jinenting33",
+      actionHref: "https://open.kakao.com/o/sujbExci",
       copyable: true,
       copyType: "kakao" as const,
       external: true,
