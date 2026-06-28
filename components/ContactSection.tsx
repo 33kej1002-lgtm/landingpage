@@ -6,15 +6,20 @@ import { Phone, Mail, MessageCircle, BookOpen, Copy, Check, ExternalLink } from 
 export default function ContactSection() {
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedKakao, setCopiedKakao] = useState(false);
 
-  const handleCopy = (text: string, type: "phone" | "email") => {
-    navigator.clipboard.writeText(text);
+  const handleCopy = (text: string, type: "phone" | "email" | "kakao") => {
+    const copyText = type === "kakao" ? "jinenting33" : text;
+    navigator.clipboard.writeText(copyText);
     if (type === "phone") {
       setCopiedPhone(true);
       setTimeout(() => setCopiedPhone(false), 2000);
-    } else {
+    } else if (type === "email") {
       setCopiedEmail(true);
       setTimeout(() => setCopiedEmail(false), 2000);
+    } else {
+      setCopiedKakao(true);
+      setTimeout(() => setCopiedKakao(false), 2000);
     }
   };
 
@@ -48,6 +53,8 @@ export default function ContactSection() {
       iconType: "kakao",
       actionText: "카톡 연결하기",
       actionHref: "https://open.kakao.com/me/jinenting33",
+      copyable: true,
+      copyType: "kakao" as const,
       external: true,
       color: "bg-[#FEE500] text-[#191919]",
     },
@@ -129,7 +136,7 @@ export default function ContactSection() {
                       className="flex items-center gap-1 text-xs font-semibold text-[#B8860B] hover:text-[#2C221E] bg-[#FDF6EA] px-2.5 py-1.5 rounded-lg border border-[#D4AF37]/30 transition-colors"
                       title="복사하기"
                     >
-                      {(ch.copyType === "phone" ? copiedPhone : copiedEmail) ? (
+                      {(ch.copyType === "phone" ? copiedPhone : ch.copyType === "email" ? copiedEmail : copiedKakao) ? (
                         <>
                           <Check className="w-3.5 h-3.5 text-green-600" />
                           <span className="text-green-600">복사됨!</span>
