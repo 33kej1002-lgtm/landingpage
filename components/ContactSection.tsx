@@ -69,14 +69,24 @@ export default function ContactSection() {
       color: "bg-[#03C75A] text-white",
     },
     {
-      title: "유튜브 채널",
+      title: "AI 유튜브 채널",
       value: "@AI톡톡TV",
-      desc: "유용한 AI 및 스피치 영상 콘텐츠",
+      desc: "생성형 AI 활용 & 스마트 업무 교육 영상",
       iconType: "youtube",
-      actionText: "유튜브 구독하기",
+      actionText: "AI 채널 구독하기",
       actionHref: "https://www.youtube.com/@AI%ED%86%A1%ED%86%A1TV",
       external: true,
       color: "bg-[#FF0000] text-white",
+    },
+    {
+      title: "스피치 유튜브 채널",
+      value: "@enting_speech",
+      desc: "보이스 트레이닝 & 스피치 자신감 영상",
+      iconType: "youtube",
+      actionText: "스피치 채널 구독하기",
+      actionHref: "https://www.youtube.com/@enting_speech",
+      external: true,
+      color: "bg-[#CC0000] text-white",
     },
   ];
 
